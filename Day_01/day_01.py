@@ -1,10 +1,8 @@
 import sys
 from functools import reduce
 
-lines = []
 with open("input", "r") as f:
-    for l in f:
-        lines.append(l[:-1])
+    lines = f.read().splitlines()
 
 incrementations = list(map(lambda x: int(x), lines))
 end_frequency = reduce(lambda x, y: x + y, incrementations)
